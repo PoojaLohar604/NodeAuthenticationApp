@@ -1,0 +1,37 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body text-center"
+        style=" box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+        rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17)
+         0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+             border-radius: 20px; 
+             margin-top: 50px;">
+            <h1 class="mb-3">
+                <img src="https://cdn-icons-png.flaticon.com/128/10337/10337227.png" alt="icon" width="20%" />
+            </h1>
+            <h2 style="color: rgba(45,253,148,1)">
+                Reset Password
+            </h2>
+            <%- include ("./messages") %>
+            <form action="/auth/reset/<%= id %>"  method="POST">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password"
+                      value="<%= typeof password != 'undefined' ? password : '' %>" />
+                  </div>
+                  <div class="form-group">
+                    <label for="password2">Confirm Password</label>
+                    <input type="password" id="password2" name="password2" class="form-control" placeholder="Confirm Password"
+                      value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
+                  </div>
+                <button type="submit" class="btn btn-primary btn-block"
+                style="background-color: rgba(45,253,148,1);
+                color:black;">Reset Password</button>
+            </form>
+            <p class="mt-4">
+                Remember your password? <a href="/auth/login">Login</a>
+            </p>
+        </div>
+    </div>
+</div>
