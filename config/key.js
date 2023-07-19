@@ -1,3 +1,3 @@
 module.exports = {
-    MongoURI: "mongodb+srv://poojapanwar:<password>@cluster0.ojk4wgk.mongodb.net/"
+    MongoURI: "mongodb+srv://poojapanwar:mikkilohar1892001@cluster0.ojk4wgk.mongodb.net/"
 }
